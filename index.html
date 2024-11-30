@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changing Website</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            transition: background-color 1s;
+        }
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Color-Changing Website!</h1>
+    <script>
+        const colors = ["#6a0dad", "#3498db", "#2ecc71", "#e74c3c", "#f1c40f"];
+        let index = 0;
+
+        setInterval(() => {
+            document.body.style.backgroundColor = colors[index];
+            index = (index + 1) % colors.length;
+        }, 2000);
+    </script>
+</body>
+</html>
